@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.amodonas{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.nombre{
+    font-family: 'Black Ops One';
+    font-size: 1.4rem;
+}
