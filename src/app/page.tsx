@@ -51,19 +51,19 @@ export default function Home() {
           <p className='texto'>Podes ordenar tus donas haciendo click en...</p>
           <article className='ordenar_article'>
             <Image src={instagram} alt='foto no disponible' />
-            <Link className='button' href={'https://www.instagram.com/amodonas.mdp/'}>
+            <Link className='button' href={'https://www.instagram.com/amodonas.mdp/'} target='_blank'>
               <button>Amodonas.mdp</button>
             </Link>
           </article>
           <article className='ordenar_article'>
             <Image src={facebook} className='face' alt='foto no disponible' />
-            <Link className='button' href={'https://www.facebook.com/amodonas.mdp/'}>
+            <Link className='button' href={'https://www.facebook.com/amodonas.mdp/'} target='_blank'>
               <button>Amodonas.mdp</button>
             </Link>
           </article>
           <article className='ordenar_article'>
             <Image src={wpp} alt='foto no disponible' />
-            <Link className='button' href={'https://wa.me/2235787936 '}>
+            <Link className='button' href={'https://wa.me/2235787936 '} target='_blank'>
               <button>Amodonas.mdp</button>
             </Link>
           </article>
