@@ -1,8 +1,8 @@
-
-import React from "react";
-import amodonas from "@/assets/img/amodonas.jpg"
+"use client"
+import React, { useEffect } from "react";
+import amodonas from "@/assets/img/amodonas.jpg";
 import Image from "next/image";
-import "./nav.css"
+import "./nav.css";
 
 import {
   Navbar,
@@ -16,43 +16,77 @@ import {
   DropdownMenu,
 } from "@nextui-org/react";
 
-
 function Navegadora() {
+  useEffect(() => {
+    const handleLinkClick = (event) => {
+      event.preventDefault();
+      const targetId = event.target.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offset = 60; // Ajusta el desplazamiento según tu diseño
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetElement.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    const links = document.querySelectorAll(".nav-link");
+
+    links.forEach((link) => {
+      link.addEventListener("click", handleLinkClick);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", handleLinkClick);
+      });
+    };
+  }, []);
+
   return (
-    <Navbar className="nav">
+    <Navbar className="nav" id="nav">
       <NavbarBrand>
-        <p className=" text-white nombre">Amodonas</p>
+        <a className="text-white nombre nav-link" href="#Home">
+          Amodonas
+        </a>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link
-            className="text-white italic m-2 border-white border-b-1"
-            href="#"
+            className="text-white italic m-2 border-white border-b-1 nav-link"
+            href="#Home"
           >
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#"
-            className="text-white italic m-2 border-white border-b-1"
+            className="text-white italic m-2 border-white border-b-1 nav-link"
+            href="#quienes_somos"
           >
             Quienes somos
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-white italic m-2 border-white border-b-1"
-            href="#"
+            className="text-white italic m-2 border-white border-b-1 nav-link"
+            href="#compras"
           >
-            Comprar
+            Ordenar Donas
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="text-white italic m-2 border-white border-b-1"
-            href="#"
+            className="text-white italic m-2 border-white border-b-1 nav-link"
+            href="#contacto"
           >
             Contacto
           </Link>
@@ -89,4 +123,5 @@ function Navegadora() {
     </Navbar>
   );
 }
+
 export default Navegadora;

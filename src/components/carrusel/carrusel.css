@@ -1,21 +1,51 @@
-section{
+/* Estilos base para pantallas grandes */
+.carusel {
     display: flex;
     margin: auto;
     width: 100%;
-    height: 450px;
+    height: 470px;
 }
 
-section .foto{
+.carusel .foto {
     width: 150px;
     flex-grow: 1;
     object-fit: cover;
-    opacity: .85;
+    opacity: .6;
     transition: width 0.3s ease;
 }
 
-section .foto:hover {
+.carusel .foto:hover {
     cursor: crosshair;
     width: 350px;
     opacity: 1;
     filter: contrast(120%);
+}
+
+/* Media query para pantallas pequeñas (max-width: 760px) */
+@media (max-width: 760px) {
+    .carusel {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .carusel .foto {
+        width: 85%;
+        max-height: 8rem;
+        opacity: .8;
+        display: block;
+        /* Asegura que las fotos sean visibles */
+    }
+
+    /* Oculta las fotos adicionales en la media query */
+    .carusel .foto:nth-child(n+4) {
+        display: none;
+    }
+
+    .carusel .foto:hover {
+        cursor: crosshair;
+        width: 90%;
+        opacity: 1;
+        filter: contrast(135%);
+    }
 }

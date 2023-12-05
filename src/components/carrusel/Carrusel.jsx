@@ -11,7 +11,7 @@ import './carrusel.css'
 export default function Carrusel() {
   return (
     <div>
-      <section className="carusel">
+      <section className="carusel" id='carusel'>
         <Image className='foto' src={foto7} alt="foto7" />
         <Image className='foto' src={foto3} alt="foto3" />
         <Image className='foto' src={foto6} alt="foto6" />

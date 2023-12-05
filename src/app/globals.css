@@ -9,3 +9,243 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#0000005e 0.9px, #e5e5f7 0.9px);
+    background-size: 18px 18px;
+}
+/*quienes somos*/
+#quienes_somos{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    border-bottom:solid 2px black ;
+}
+
+.qs2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quien_imagen{
+    max-width: 20.5rem;
+    max-height: 20.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: solid 2px rgb(0, 130, 216);
+    border-radius: 15px;
+}
+
+.span1{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.contenedorSpan{
+    background-color: #fff;
+    border: solid 2px rgb(0, 130, 216);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+}
+/*ordenar donas*/
+
+#compras{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    height: 27rem;
+    margin-top: 3rem;
+}
+
+.texto{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.ordenar_div{
+    display: grid;
+    place-content: center;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.ordenar_article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 1.5rem;
+}
+
+
+.ordenar_span{
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.ordenar_title{
+    color: #fff;
+    margin-top: 1rem;
+    border-bottom: 2px solid #fff;
+}
+
+.button{
+    margin-left: 1.5rem;
+    padding: .4rem;
+    font-weight: 600;
+    background-color: rgb(0, 130, 216);
+    border-radius: 10px;
+}
+.face{
+    background-color: #fff;
+    width: 2.2rem;
+    border-radius: 16px;
+}
+
+#contacto{
+    margin-top: 4rem;
+    height: 15rem;
+    background-color: rgba(5, 87, 141, 0.509);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto_title {
+    color: black;
+    margin-top: 1rem;
+    border-bottom: 2px solid #000000;
+}
+.contacto_section{
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto_section2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.articulo_1{
+    margin-right: 2rem;
+    font-weight: 500;
+}
+
+.articulo_2{
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.contenedorH3{
+    display: grid;
+    place-content: center;
+}
+
+.contacto_h3{
+    color: black;
+    font-weight: 600;
+    border-bottom: 2px solid #000000;
+}
+
+.contenedorRedes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redess{
+    width: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:790px) {
+    .span1{
+        font-size: .8rem;
+        font-weight: 700;
+    }
+    .articulo_1{
+        margin-right: .5rem;
+    }
+    .articulo_2{
+        margin-left: .5rem;
+    }
+    
+}
+@media screen and (max-width:760px) {
+    
+    #compras{
+        margin-top: 4rem;
+    }
+    
+    .quien_imagen{
+        max-width: 15.5rem;
+        max-height: 15.5rem;
+    }
+}
+
+@media screen and (max-width:675px) {
+    .ordenar_span{
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+    .texto{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .span1{
+        font-size: .8rem;
+        font-weight: 700;
+    }
+    
+    .quien_imagen{
+        max-width: 12rem;
+        max-height: 12rem;
+    }
+    .qs2{
+        flex-direction: column;
+    }
+    .contenedorSpan{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .ordenar_span{
+        font-size: .7rem;
+    }
+
+}
+@media screen and (max-width:380px) {
+    .ordenar_span{
+        font-size: .7rem;
+        margin-right: .5rem;
+        margin-left: .5rem;
+    }
+}
