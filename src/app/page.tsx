@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Navegadora from '@/components/navbar/Navegadora';
-import Carrusel from '@/components/carrusel/carrusel'
+import Carrusel from '@/components/carrusel/Carrusel';
 import foto1 from "@/assets/img/foto1.webp"
 import foto4 from "@/assets/img/foto4.webp"
 import foto8 from "@/assets/img/foto8.webp"
